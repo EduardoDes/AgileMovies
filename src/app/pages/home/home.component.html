@@ -1,0 +1,35 @@
+<div class="col-12"><h1 style="margin-bottom: 1%; margin-top: 5%; margin-left: 5%;">Peliculas en Estreno</h1></div>
+<div class="items">
+    <div  *ngFor="let estrenos of resultadoEstrenos">
+  
+        <div class="col-3 item" style="max-width: max-content" routerLink="/peliculas/{{estrenos.id}}">
+            <div class="card" style="width: 400px; margin: 5px;">
+                <img class="card-img-top img-responsive" src='{{estrenos.backdrop_path}}' alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">{{estrenos.title}}</h4>
+                </div>
+            </div>
+        </div>
+       
+     </div>
+ </div>
+
+
+ <div class="col-12"><h1 style="margin-bottom: 1%; margin-top: 10%; margin-left: 5%;">Peliculas mas Populares</h1></div>
+
+<div class="row" style="margin-top: 5%; margin-left: 5%;">
+
+    <div *ngFor="let populares of resultadoPopulares">
+        <div class="col-2" style="max-width: 100%;" routerLink="/peliculas/{{populares.id}}">
+            <!-- Card -->
+            <div class="card">
+                <img class="card-img-top img-responsive" src='{{populares.backdrop_path}}' alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">{{populares.title}}</h4>
+                </div>
+            </div>
+            <!-- Card -->
+        </div>
+    </div>
+
+</div>
